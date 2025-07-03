@@ -1,0 +1,110 @@
+1. Tendo em conta o funcionamento da Web, para que serve o JS? Indique exemplos.
+
+O JavaScript (JS) serve para tornar as páginas web interativas. Ele corre no navegador e permite, por exemplo, validar formulários antes de serem enviados, criar animações, mostrar ou esconder elementos da página sem ter de recarregar, e reagir a cliques do utilizador. Um exemplo é quando clicamos num botão e aparece uma mensagem sem sair da página, ou quando um menu se abre ao passar o rato por cima.
+
+2. O elemento input deve ser criado no HTML, porque o HTML é usado para estruturar a página e definir os elementos que vão aparecer, como formulários e campos de texto. O JavaScript pode depois ser usado para tornar o formulário interativo, como validar o que o utilizador escreve ou enviar os dados, mas o campo input em si é definido no HTML.
+
+
+3.1 num1 + num2 = 8?
+
+Resposta: Não. O resultado é '53' e não 8.
+
+Justificação: As variáveis num1 e num2 são strings (porque estão entre aspas), por isso quando fazemos num1 + num2, o JavaScript junta as duas strings em vez de somar os números.
+Ou seja, '5' + '3' dá '53', não 8.
+
+3.2 hello retorna "olá Rita 31"?
+
+Resposta: Não, hello não retorna "olá Rita 31".
+
+A função escreve na consola: olá Rita (por causa do console.log)
+Mas o que ela retorna é apenas o valor de age, ou seja, 31
+
+3.3 age retorna 31?
+
+Resposta: Sim, age vai ter o valor 31.
+
+3.4 Se eu acrescentar no código num2 = 15, que valor recebo em num2?
+
+Resposta: O valor de num2 passa a ser 15 (um número, não uma string).
+
+3.5 num1 + num2 é agora 20?
+
+Resposta: Não, o resultado será '515', não 20.
+Justificação: num1 ainda é '5' → uma string
+
+3.6 Para que num1 + num2 seja 16, como coloco no código o num1?
+let num1 = 1;
+let num2 = 15;
+
+3.7 Qual é o tipo de dados da variável jsDone?
+
+Resposta: O tipo de dados da variável jsDone é boolean.
+
+4.1 Usando os métodos dos Arrays, adiciona no fim do array uma palavra pass à tua escolha.
+passwords.push('openai123');
+
+4.2 Verificar se a password do utilizador está no array e mostrar um alert
+if (passwords.includes(userPassword)) {
+  alert('Password correta!');
+} else {
+  alert('Password incorreta.');
+}
+
+4.3 Criar um array chamado safePasses com passwords com mais de 6 caracteres
+// converter para string pois o array passwords nao contem apenas strings, assim podemos usar o .length da string
+let safePasses = passwords.filter(password => String(password).length > 6);
+
+5.1. Usando os métodos dos arrays, itere o array de modo a imprimir na consola o seguinte:
+(1V)
+
+studentGrades.forEach((student) => {
+  console.log(`A nota de ${student.studentName} é ${student.grade}`);
+});
+
+5.2. Qual o valor de studentGrades[5]?
+Resposta: studentGrades[5] é undefined. O array studentGrades tem apenas 5 elementos, com índices de 0 a 4. Portanto, não existe um studentGrades[5], e por isso o valor é undefined.
+
+5.3 studentGrades[0].nameAndGrade() é "A Rita tem nota 16"?
+Resposta: Sim, é "A Rita tem nota 16".
+
+6.1. Substitua “A minha Lista de Aprendizagens como Web Developer” por “Os meus ensinamentos para a vida”.
+
+document.querySelector('.achievements').textContent = 'Os meus ensinamentos para a vida';
+
+6.2. A cada um dos items da lista, adicione: com sucesso! 
+let listItems = document.querySelectorAll('#myList li');
+
+listItems.forEach(item => {
+  item.textContent += ' - com sucesso!';
+});
+
+6.3. Configure a submissão do formulário para que, ao ser submetido um novo item ele seja adicionado na lista
+
+const form = document.querySelector('form');
+const ul = document.getElementById('myList');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault(); // evita recarrregar a página
+
+  const formData = new FormData(form);
+  const newValue = formData.get('myItem');
+
+  const newItem = document.createElement('li');
+  newItem.textContent = newValue;
+  ul.appendChild(newItem);
+
+  form.reset(); // limpa o formulário
+});
+
+7. Utilize a API do estúdio Ghibli, com o seguinte endpoint https://ghibliapi.vercel.app/films/12cfb892-aac0-4c5b-94af-521852e46d6a . Qual é o title do filme que retorna?
+"title": "Grave of the Fireflies"
+
+Resposta: Grave of the Fireflies
+
+8. Escreva um script em JS que, quando o user clicar no teclado na tecla ESC, dispare um alert a dizer: ‘tens a certeza que queres entregar o teste?’
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    alert('Tens a certeza que queres entregar o teste?');
+  }
+});
