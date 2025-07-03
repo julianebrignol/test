@@ -44,11 +44,12 @@ Resposta: O tipo de dados da variável jsDone é boolean.
 passwords.push('openai123');
 
 4.2 Verificar se a password do utilizador está no array e mostrar um alert
-if (passwords.includes(userPassword)) {
-  alert('Password correta!');
-} else {
-  alert('Password incorreta.');
-}
+ let passwordsString = passwords.map(pass => String(pass));
+  if (passwordsAsString.includes(userPassword)) {
+    alert('Password correta!');
+  } else {
+    alert('Password incorreta.');
+  }
 
 4.3 Criar um array chamado safePasses com passwords com mais de 6 caracteres
 // converter para string pois o array passwords nao contem apenas strings, assim podemos usar o .length da string
