@@ -1,1 +1,105 @@
-// enunciado
+Trabalho Prático – Design Patterns
+Curso: Software Developer
+Docente: Vitor Santos
+
+Objetivos
+Desenvolver um programa em Java que cumpra os pré-requisitos descritos.
+
+O código deve estar comentado — isso será avaliado.
+
+A otimização do código será avaliada.
+
+O programa deve compilar e executar sem erros.
+
+O projeto deve seguir o padrão MVC (Model-View-Controller).
+
+Entregar um .zip com o nome TP_DPT_(nome_formando) via Microsoft Teams.
+
+Contexto
+Foi contratado pelo CESAE Resort – Hotel Temático da Programação para criar uma aplicação que:
+
+Carregue a base de dados de quartos, experiências e vendas
+
+Permita análises de exploração
+
+Funcionalidades Gerais
+A aplicação deve ter um menu de login com os seguintes perfis de acesso:
+
+ADMIN – Administrador
+
+GESTAO – Rececionista
+
+GUIA – Guia de Experiência
+
+Cliente – acesso sem login
+
+Data Atual: Ano 2025, Mês 7 (Julho), Semana 1
+
+Menu Cliente (sem login)
+Consultar Quartos Disponíveis
+Exibe: num_quarto, tipologia, preco_por_semana
+
+Consultar Experiências Disponíveis
+Exibe: nome, rating_experiencia, nome do guia, rating_guia, preco_adulto, preco_crianca
+
+Consultar Experiência Favorita
+Exibe a experiência com melhor rating
+
+Consultar Experiência Top-Seller
+Exibe a experiência com mais bilhetes vendidos
+
+Avaliar uma Experiência
+Escolher uma experiência e avaliar: rating_experiencia, rating_guia
+
+Menu Rececionista (GESTAO)
+Consultar Quartos Disponíveis (Semana Atual)
+
+Consultar Quartos Reservados
+Exibe: num_quarto, tipologia, idCliente, nome, email, nacionalidade, ano, mês, semana
+
+Consultar Reservas Atuais (Semana Atual)
+Exibe como acima
+
+Efetuar uma Reserva
+Pergunta: idCliente, numQuarto, ano, mês, semana
+Verifica disponibilidade e efetua a reserva
+
+Reservar uma Experiência
+Pergunta: idCliente, idReserva, nº adultos, nº crianças
+Efetua reserva da experiência
+
+Menu Guia de Experiência (GUIA)
+Consultar Histórico de Experiências
+Exibe experiências da sua responsabilidade + total de adultos/crianças + valor arrecadado
+
+Menu Administrador (ADMIN)
+Consultar Total de Reservas
+
+Consultar Total de Receitas
+Soma de: preco_por_semana + bilhetes
+
+Consultar Reservas/Receitas Mensais
+Pergunta: ano, mês
+
+Consultar Tipologia de Quarto Mais Reservada
+
+Consultar Experiência Mais Procurada (Adultos)
+
+Consultar Experiência Mais Procurada (Crianças)
+
+Consultar Experiência Mais Lucrativa
+
+Consultar Experiência Menos Lucrativa
+
+Consultar Quarto com Melhor Preço/Semana
+
+Adicionar Novo Login
+
+Desenvolvimento
+Criar a estrutura de classes e todas as assinaturas de métodos
+
+Implementar um sistema de login funcional (a partir de ficheiro de logins)
+
+Cada tipo de utilizador deve ter pelo menos uma funcionalidade implementada
+
+Gerar Javadoc
